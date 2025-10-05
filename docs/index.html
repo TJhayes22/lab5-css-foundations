@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 5 - Login Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        h1 {
+            color: blue;
+            font-size: 2.5rem;
+        }
+
+        form-field {
+            display: block;
+        }
+
+        #login-info {
+            background-color: red;;
+        }
+        #login-form {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <section id="login-info">
+        <h1>Super Ai Dash</h1>
+        <p class="description">Ai powered finance from Apes, alt-coins, and fiat currency, we promise you won't lose <i><strong>all</strong></i> of it.</p>
+    </section>
+    <section id ="login-form">
+        <form action="login.php" method="post" class="login-form">
+            <form-field>
+                <label for="emailField">Email Address:</label>
+                <input type="email" id="emailField" name="email" placeholder="you@example.com" autofocus required>
+            </form-field>
+
+            <form-field>
+                <label for="passwordField">Password:</label>
+                <input type="password" id="passwordField" name="password" placeholder="Enter your password" required>
+            </form-field>
+
+            <form-field>
+                <button type="submit">Sign In</button>
+            </form-field>
+
+            <password-recovery>
+                <a href="forgot.php">Forgot password?</a>
+            </password-recovery>
+        </form>
+    </section>
+</body>
+</html>
