@@ -2,14 +2,15 @@
     --primary-color: #4a90e2;
     --secondary-color: #53a3fd;
     --third-color: #4282cb;
+    --sign-in-button-color: #4c6ef5;
     --white: #ffffff;
     --page-background: #f0f2f5;
     --text-color: #333;
-    --font-family: 'Arial', sans-serif;
+    --font-family: 'Inter', sans-serif;
     --font-size-base: 16px;
     --spacing-base: 1rem;
-    --border-radius: 24px;
-    --hover-color: #ffffff;
+    --border-radius: 16px;
+    --input-button-border-radius: 4px;
 }
 
 * {
@@ -20,21 +21,28 @@
 
 h1 {
     font-size: 2.5rem;
-    font-family: var(--font-family);
 }
 
 p {
-    font-size: 1.25rem;
-    font-family: var(--font-family);
+    font-size: 1rem;
 }
 
 body {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 0px;
+    display: flex;
     min-height: 100vh;
     background-color: var(--page-background);
     padding: 20px;
+    font-family: var(--font-family);
+}
+
+.login-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 0;
+    width: 100%;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    background: transparent;
 }
 
 #login-info {
@@ -45,16 +53,17 @@ body {
     justify-content: center;
     align-items: flex-start;
     padding-left: var(--spacing-base);
+    padding-right: var(--spacing-base);
     border-top-left-radius: var(--border-radius);
     border-bottom-left-radius: var(--border-radius);
 }
 
 #login-info h1{
+    font-weight: bold;
     margin-bottom: 20px;
 }
         
 #login-form {
-    font-family: var(--font-family);
     color: var(--text-color);
     background-color: var(--white);
     display: flex;
@@ -81,9 +90,9 @@ form-field label {
 }
 
 form-field input {
-    padding: 10px;
+    padding: 14px;
     border: 1px solid #ccc;
-    border-radius: var(--border-radius);
+    border-radius: var(--input-button-border-radius);
     margin-bottom: 24px;
     width: 100%;
     box-sizing: border-box;
@@ -97,19 +106,21 @@ sign-in-and-forgot-password {
 }
 
 #sign-in {
-    background-color: var(--primary-color);
+    background-color: var(--sign-in-button-color);
     color: var(--white);
-    border: 1px solid #4a90e2;
-    padding: 10px;
-    border-radius: var(--border-radius);
+    border: 1px solid var(--sign-in-button-color);
+    padding: 12px;
+    border-radius: var(--input-button-border-radius);
     cursor: pointer;
     font-size: 1rem;
     transition: background 0.3s ease, transform 0.2s ease;
+    width: 100px;
+    font-weight: bold;
 }
 
 #sign-in:hover {
-    background-color: var(--hover-color);
-    color: var(--primary-color);
+    background-color: var(--white);
+    color: var(--sign-in-button-color);
 }
 
 password-recovery {
